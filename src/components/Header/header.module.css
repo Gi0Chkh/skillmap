@@ -1,0 +1,27 @@
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 12vh;
+    box-shadow: 1px 1px 10px rgb(167, 167, 167);
+}
+img {
+    width: auto;
+    height: 100%;
+}
+.navLink {
+    color: black;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    text-decoration: none;
+    margin: 0 75px;
+}
+.navLink:hover {
+    border: 2px solid hsl(0, 0%, 67%);
+    
+    
+}
