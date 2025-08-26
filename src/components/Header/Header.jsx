@@ -6,31 +6,37 @@ function Header() {
         {
             id: 1,
             url: '/',
-            target: "Home Page"
+            target: "Home"
         },
         {
             id: 2,
-            url: '/services',
-            target: "Services"
-        },
-        {
-            id: 3,
-            url: '/about',
+            url: '/about-us',
             target: "About Us"
         },
         {
+            id: 3,
+            url: '/how-it-works',
+            target: "How It Works"
+        },
+        {
             id: 4,
-            url: '/contact',
-            target: "Contact Us"
+            url: '/pricing',
+            target: "Pricing"
         }
     ]
 
 
   return (
     <header>
-        <img src="logo.png" alt="site logo" />
-        <nav className={styles.navBar}>
-            {links.map(link => (<a className={styles.navLink} href={link.url}>{link.target}</a>))}
+        <nav className={styles.contentWrapper}>
+            <div className={styles.linkWrapper}>
+                <a href='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></a>
+                {links.map(link => (<a key={link.id} className={styles.navLink} href={link.url}>{link.target}</a>))}
+            </div>
+            <div className={styles.buttonWrapper}>
+                <button className={styles.loginButton}>Log In</button>
+                <button className={styles.regButton}>Join Us</button>
+            </div>
         </nav>
     </header>
   )

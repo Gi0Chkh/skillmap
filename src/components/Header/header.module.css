@@ -1,27 +1,54 @@
 header {
     position: fixed;
-    top: 0;
+    width: 100%;
+    box-shadow: 0px 0px 24px 0px rgb(0, 0, 0, 0.3);
+}
+.contentWrapper {
+    max-width: 80%;
+    height: 85px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
+}
+.linkWrapper {
+    height: 100%;
+    display: flex;
     align-items: center;
-    width: 100vw;
-    height: 12vh;
-    box-shadow: 1px 1px 10px rgb(167, 167, 167);
+    gap: 50px;
 }
 img {
-    width: auto;
-    height: 100%;
+    width: 85px;
 }
 .navLink {
     color: black;
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 550;
+    font-weight: 500;
     text-decoration: none;
-    margin: 0 75px;
 }
 .navLink:hover {
-    border: 2px solid hsl(0, 0%, 67%);
-    
-    
+    color: var(--first-color);
+}
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.loginButton {
+    background-color: initial;
+    border: none;
+    font-size: 1.2em;
+    color: gray;
+    cursor: pointer;
+}
+.loginButton:hover {
+    color: darkgrey;
+}
+.regButton {
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 10px;
+    color: white;
+    background-color: var(--second-color);
+    cursor: pointer;
 }
