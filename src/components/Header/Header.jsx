@@ -1,27 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from "./header.module.css"
+import LangToggle from '../langToggle/LangToggle'
+import { LanguageContext } from '../../context/LanguageContext'
 
 function Header() {
+    const {lang} = useContext(LanguageContext);
+
     const links = [
         {
             id: 1,
             url: '/',
-            target: "Home"
+            targetEn: "Home",
+            targetKa: "მთავარი"
         },
         {
             id: 2,
             url: '/about-us',
-            target: "About Us"
+            targetEn: "About Us",
+            targetKa: "ჩვენს შესახებ"
         },
         {
             id: 3,
             url: '/how-it-works',
-            target: "How It Works"
+            targetEn: "How It Works",
+            targetKa: "როგორ მუშაობს"
         },
         {
             id: 4,
             url: '/pricing',
-            target: "Pricing"
+            targetEn: "Pricing",
+            targetKa: "ფასები"
         }
     ]
 
@@ -31,11 +39,12 @@ function Header() {
         <nav className={styles.contentWrapper}>
             <div className={styles.linkWrapper}>
                 <a href='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></a>
-                {links.map(link => (<a key={link.id} className={styles.navLink} href={link.url}>{link.target}</a>))}
+                {links.map(link => (<a key={link.id} className={styles.navLink} href={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</a>))}
             </div>
             <div className={styles.buttonWrapper}>
-                <button className={styles.loginButton}>Log In</button>
-                <button className={styles.regButton}>Join Us</button>
+                <LangToggle />
+                <button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button>
+                <button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button>
             </div>
         </nav>
     </header>
