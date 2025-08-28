@@ -44,8 +44,8 @@ function Header() {
             </div>
             <div className={styles.buttonWrapper}>
                 <LangToggle />
-                <button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button>
-                <button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button>
+                <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
+                <Link to='/register'><button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button></Link>
             </div>
         </nav>
     </header>
