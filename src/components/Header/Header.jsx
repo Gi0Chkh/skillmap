@@ -39,7 +39,7 @@ function Header() {
     <header>
         <nav className={styles.contentWrapper}>
             <div className={styles.linkWrapper}>
-                <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link>
+                {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
                 {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
             </div>
             <div className={styles.buttonWrapper}>
