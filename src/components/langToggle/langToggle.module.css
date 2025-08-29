@@ -1,23 +1,9 @@
-.noDisplay, .noDisplay button{
-    display: none;
-}
 .languages {
     display: flex;
     position: absolute;
     flex-direction: column;
     border-radius: 0 0 10px 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.languages button {
-    cursor: pointer;
-    border: none;
-    border-radius: 0px;
-    min-width: 85px;
-    padding: 10px 0;
-}
-.dropdown {
-    float: left;
-    overflow: hidden;
 }
 .dropBtn {
     width: 85px;
@@ -28,7 +14,4 @@
     color: rgb(108, 108, 108);
     background-color: white;
     cursor: pointer;
-}
-.dropBtn:hover {
-    background-color: rgb(221, 221, 221);
 }

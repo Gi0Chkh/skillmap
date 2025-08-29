@@ -41,11 +41,10 @@ function Header() {
             <div className={styles.linkWrapper}>
                 {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
                 {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
-            </div>
-            <div className={styles.buttonWrapper}>
                 <LangToggle />
-                <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
-                <Link to='/register'><button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button></Link>
+                <img src="/public/Profile.png" alt="profile pic" to='/login' className={styles.profile}/>
+                {/* <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link> */}
+                {/* <Link to='/register'><button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button></Link> */}
             </div>
         </nav>
     </header>
