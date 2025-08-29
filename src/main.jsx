@@ -1,15 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
+// ___COMPONENTS___
 import Header from './components/Header/Header.jsx'
 import LanguageProvider from './context/LanguageContext.jsx'
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
-import AboutUsPage from './pages/AboutUs/AboutUsPage.jsx'
-import HowItWorksPage from './pages/HowItWorks/HowItWorksPage.jsx'
-import PricingPage from './pages/Pricing/PricingPage.jsx'
+// PAGES
+import App from './App.jsx'
 import LoginPage from './pages/Login/LoginPage.jsx'
 import RegistrationPage from './pages/Registration/RegistrationPage.jsx'
+import PricingPage from './pages/Pricing/PricingPage.jsx'
+import HowItWorksPage from './pages/HowItWorks/HowItWorksPage.jsx'
+import AboutUsPage from './pages/AboutUs/AboutUsPage.jsx'
+
 
 const router = createBrowserRouter([
   {

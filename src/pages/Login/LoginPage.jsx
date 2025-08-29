@@ -1,26 +1,24 @@
-import React from 'react'
+import React, { useState, useContext, useRef } from "react";
 import styles from './loginPage.module.css'
+import Button from '../../components/Button/Button'
+import Input from '../../components/Input/Input'
+import { LanguageContext } from "../../context/LanguageContext";
 
 function LoginPage() {
+  const { lang } = useContext(LanguageContext);
   return (
       <div class = {styles.login_box}>
-        <h2>Login</h2>
+        <img src="/public/skillMap Icon.svg" alt="skillMap icon" className={styles.icon} />
         <form>
             <div class = {styles.user_box}>
-                <input type="text"/>
-                <label for="username">User</label>
+                <Input type="text" placeholder={lang === "EN" ? "Email" : "მეილი"}/>
             </div>
             <div class = {styles.user_box}>
-                <input type="password" id="password"/>
-                <label for="password">Password</label>
+                <Input type="password" id="password" placeholder={lang === "EN" ? "Password" : "პაროლი"}/>
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-            </a>
+            <a href='#' className={styles.forgotPassword}>{lang === "EN" ? "Forgot password" : "დაგავიწყდა პაროლი?"}</a>
+            <Button clickEvent="#" text={lang === "EN" ? "Log In" : "შესვლა"}/>
+            <p>{lang === "EN" ? "Don't have an account?" : "არ გაქვს აქაუნთი?"} <a href='/register' className={styles.dontHaveAcc}>{lang === "EN" ? "Sign Up" : "შესვლა"}</a></p>
         </form>
       </div>
   )

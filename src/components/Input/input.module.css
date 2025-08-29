@@ -1,0 +1,12 @@
+input {
+
+    color: var(--dark-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: white;
+
+}
