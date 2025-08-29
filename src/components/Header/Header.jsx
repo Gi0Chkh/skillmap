@@ -1,90 +1,64 @@
-import React, { useState, useContext, useRef } from "react";
-import styles from "./header.module.css";
-import LangToggle from "../langToggle/LangToggle";
-import { LanguageContext } from "../../context/LanguageContext";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import styles from "./header.module.css"
+import LangToggle from '../langToggle/LangToggle'
+import { LanguageContext } from '../../context/LanguageContext'
+import { Link } from 'react-router-dom';
 
 function Header() {
-  const { lang } = useContext(LanguageContext);
+  const [burgerBarActive, setBurgerBarActive] = React.useState("");
+  const {lang} = useContext(LanguageContext);
 
   const links = [
     {
       id: 1,
-      url: "/",
+      url: '/',
       targetEn: "Home",
-      targetKa: "მთავარი",
+      targetKa: "მთავარი"
     },
     {
       id: 2,
-      url: "/about-us",
+      url: '/about-us',
       targetEn: "About Us",
-      targetKa: "ჩვენს შესახებ",
+      targetKa: "ჩვენს შესახებ"
     },
     {
       id: 3,
-      url: "/how-it-works",
+      url: '/how-it-works',
       targetEn: "How It Works",
-      targetKa: "როგორ მუშაობს",
+      targetKa: "როგორ მუშაობს"
     },
     {
       id: 4,
-      url: "/pricing",
+      url: '/pricing',
       targetEn: "Pricing",
-      targetKa: "ფასები",
-    },
-  ];
-
-  const [toggled, setToggled] = useState(false);
-  const window = useRef(null);
-
-  function burgerFunc() {
-    if (window.current) {
-      if (toggled) {
-        window.current.style.right = -100 + "%";
-      } else {
-        window.current.style.right = 0;
-      }
+      targetKa: "ფასები"
     }
-    setToggled(!toggled);
-  }
+  ]
+
+  const handleBurgerBarClick = () => {
+    setBurgerBarActive(!burgerBarActive);
+  };
 
   return (
     <header>
-      <nav ref={window} className={styles.contentWrapper}>
-        <div className={styles.linkWrapper}>
-          {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
-          {links.map((link) => (
-            <Link key={link.id} className={styles.navLink} to={link.url}>
-              {lang === "EN" ? link.targetEn : link.targetKa}
-            </Link>
-          ))}
-          <LangToggle />
-          <img
-            src="/public/Profile.png"
-            alt="profile pic"
-            to="/login"
-            className={styles.profile}
-          />
-          <Link to="/login">
-            <button className={styles.loginButton}>
-              {lang === "EN" ? "Log In" : "შესვლა"}
-            </button>
-          </Link>
-          <Link to="/register">
-            <button className={styles.regButton}>
-              {lang === "EN" ? "Join Us" : "შემოგვიერთდი"}
-            </button>
-          </Link>
-        </div>
-      </nav>
-      <button className={styles.burger} onClick={() => burgerFunc()}>
-        <img
-          src={toggled ? "/public/Cross.png" : "/public/Burger.png"}
-          alt="burget icon"
-        />
-      </button>
+        <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column-reverse" } : {}}>
+          <div className={`${styles.linkWrapper} ${burgerBarActive && styles.showLinks}`}>
+              {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
+              {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
+          </div>
+          <div className={styles.buttonWrapper}>
+            <div className={`${styles.burgerBar} ${burgerBarActive && styles.activeBar}`} onClick={handleBurgerBarClick}>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <LangToggle />
+            <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
+            <Link to='/register'><button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button></Link>
+          </div>
+        </nav>
     </header>
-  );
+  )
 }
 
-export default Header;
+export default Header

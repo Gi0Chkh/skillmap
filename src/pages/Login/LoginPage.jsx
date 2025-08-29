@@ -1,6 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
 import styles from './loginPage.module.css'
-import Button from '../../components/Button/Button'
 import Input from '../../components/Input/Input'
 import { LanguageContext } from "../../context/LanguageContext";
 
@@ -17,7 +16,7 @@ function LoginPage() {
                 <Input type="password" id="password" placeholder={lang === "EN" ? "Password" : "პაროლი"}/>
             </div>
             <a href='#' className={styles.forgotPassword}>{lang === "EN" ? "Forgot password" : "დაგავიწყდა პაროლი?"}</a>
-            <Button clickEvent="#" text={lang === "EN" ? "Log In" : "შესვლა"}/>
+            <button onClick="#">{lang === "EN" ? "Log In" : "შესვლა"}</button>
             <p>{lang === "EN" ? "Don't have an account?" : "არ გაქვს აქაუნთი?"} <a href='/register' className={styles.dontHaveAcc}>{lang === "EN" ? "Sign Up" : "შესვლა"}</a></p>
         </form>
       </div>

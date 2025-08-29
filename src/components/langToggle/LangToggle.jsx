@@ -3,21 +3,36 @@ import { LanguageContext } from '../../context/LanguageContext'
 import styles from './langToggle.module.css'
 
 function LangToggle() {
+    const [drop, setDrop] = useState(styles.noDisplay);
     const {setLang, lang} = useContext(LanguageContext);
 
 
-    const changeLanguage = () => {
-        if (lang === "KA") {
-            setLang("EN");
+    const handleDropdown = () => {
+        if (drop === styles.noDisplay) {
+            setDrop(styles.languages);
         }
         else {
-            setLang("KA");
+            setDrop(styles.noDisplay);
         }
+    }
+
+    const handleKAClick = () => {
+        setLang("KA");
+        setDrop(styles.noDisplay);
+    }
+    const handleENClick = () => {
+        setLang("EN");
+        setDrop(styles.noDisplay);
     }
 
   return (
     <div className={styles.dropdown}>
-        <button onClick={changeLanguage} className={styles.dropBtn}>{lang === "EN" ? "English" : "ქართული"}</button>
+        <button onClick={handleDropdown} className={styles.dropBtn}>{lang === "EN" ? "English" : "ქართული"}</button>
+        <div className={drop}>
+            <button onClick={handleKAClick}>KA</button>
+            <button onClick={handleENClick}>EN</button>
+        </div>
+
     </div>
   )
 }
