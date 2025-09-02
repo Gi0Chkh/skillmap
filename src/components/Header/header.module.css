@@ -1,6 +1,7 @@
 header {
   width: 100%;
   box-shadow: 0px 0px 24px 0px rgb(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
 }
 .contentWrapper {
   max-width: 95%;
@@ -8,6 +9,7 @@ header {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  transition: all 0.3s ease-in-out;
 }
 .phoneHeader {
   display: flex;
@@ -20,7 +22,6 @@ header {
   align-items: center;
 }
 .linkWrapper {
-  height: 100%;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -74,15 +75,13 @@ img {
   .contentWrapper {
     width: 100%;
     height: auto;
+    
   }
   .phoneHeader {
     width: 100%;
     height: 85px;
   }
-  .linkWrapper {
-    display: none;
-  }
-  .buttonWrapper {
+  .linkWrapper, .buttonWrapper {
     display: none;
   }
   .burgerBar {
@@ -105,6 +104,12 @@ img {
     transform: rotate(-45deg) translate(5px, -6.5px);
   }
   .showLinks, .navLink{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0;
+  }
+  .showButtons {
     display: block;
     margin: 15px 0;
   }

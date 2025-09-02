@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 // ___COMPONENTS___
 import Header from './components/Header/Header.jsx'
+import Footer from './components/Footer/Footer.jsx'
 import LanguageProvider from './context/LanguageContext.jsx'
 // PAGES
 import App from './App.jsx'
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Outlet />
+        <Footer />
       </>
     ),
     children: [

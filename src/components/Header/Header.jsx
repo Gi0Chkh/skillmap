@@ -40,8 +40,8 @@ function Header() {
   };
 
   return (
-    <header>
-        <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column" } : {}}>
+    <header style={burgerBarActive ? {position: "fixed", top: 0, left: 0, width: "100%", zIndex: 10} : {}}>
+        <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column", height: "100vh", transition: "all 2s ease-in-out"} : {}}>
           <div className={styles.phoneHeader}>
             <Link to="/"><img src="/skillMap(no text).svg" alt="Skillmap Logo"  className={styles.headerIcon}/></Link>
             <div className={`${styles.burgerBar} ${burgerBarActive && styles.activeBar}`} onClick={handleBurgerBarClick}>
@@ -54,9 +54,9 @@ function Header() {
               {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
               {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
           </div>
-          <div className={styles.buttonWrapper}>
+          <div className={`${styles.buttonWrapper} ${burgerBarActive && styles.showButtons}`}>
             <LangToggle />
-            <Link to='/login'><button className={`${styles.loginButton} ${burgerBarActive && styles.showLinks}`}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
+            <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
           </div>
         </nav>
     </header>
