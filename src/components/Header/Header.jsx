@@ -41,20 +41,22 @@ function Header() {
 
   return (
     <header>
-        <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column-reverse" } : {}}>
-          <div className={`${styles.linkWrapper} ${burgerBarActive && styles.showLinks}`}>
-              {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
-              {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
-          </div>
-          <div className={styles.buttonWrapper}>
+        <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column" } : {}}>
+          <div className={styles.phoneHeader}>
+            <Link to="/"><img src="/skillMap(no text).svg" alt="Skillmap Logo"  className={styles.headerIcon}/></Link>
             <div className={`${styles.burgerBar} ${burgerBarActive && styles.activeBar}`} onClick={handleBurgerBarClick}>
               <i></i>
               <i></i>
               <i></i>
             </div>
+          </div>
+          <div className={`${styles.linkWrapper} ${burgerBarActive && styles.showLinks}`}>
+              {/* <Link to='/' className={styles.logoLink}><img src="/skillMapIcon.svg" alt="site icon" /></Link> */}
+              {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
+          </div>
+          <div className={styles.buttonWrapper}>
             <LangToggle />
-            <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
-            <Link to='/register'><button className={styles.regButton}>{lang === "EN" ? "Join Us" : "შემოგვიერთდი"}</button></Link>
+            <Link to='/login'><button className={`${styles.loginButton} ${burgerBarActive && styles.showLinks}`}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
           </div>
         </nav>
     </header>
