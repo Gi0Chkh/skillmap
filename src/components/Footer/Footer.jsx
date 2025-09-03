@@ -1,13 +1,14 @@
-import React from 'react'
-import styles from './footer.module.css'
-import { LanguageContext } from '../../context/LanguageContext'
-import { Link } from 'react-router-dom'
+import React from "react";
+import styles from "./footer.module.css";
+import { LanguageContext } from "../../context/LanguageContext";
 
 function Footer() {
-    const {lang} = React.useContext(LanguageContext);
+  const { lang } = React.useContext(LanguageContext);
   return (
-    <div>Footer</div>
-  )
+    <footer className={styles.footer}>
+      Footer
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

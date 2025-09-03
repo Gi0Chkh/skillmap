@@ -1,75 +1,66 @@
 .registration_box {
-
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-
+  width: 100%;
+  height: 100vh;
+  padding: 7% 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
 }
 
 .icon {
-
-    width: 200px;
-
-}
-
-.registration_box h2 {
-
-    width: 300px;
-    text-align: left;
-    font-size: 25px;
-    margin: 0 0 30px;
-    padding: 0;
-    color: var(--third-color);
-
+  width: 150px;
 }
 
 .registration_box .user_box {
-
-    position: relative;
-
+  position: relative;
 }
 
 .registration_box form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 5%;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.registration_box form h2 {
+  font-size: 3rem;
 }
 
 .registration_box .user_box input {
-
-    width: 75vw;
-    height: 50px;
-    padding: 10px;
-    margin-bottom: 10px;
-
+  min-width: 25vw;
+  height: 50px;
+  padding: 10px;
+  margin-top: 10px;
 }
 
-.registration_box form button {
-
-    width: 75vw;
-    height: 50px;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 20px;
-    letter-spacing: 4px;
-
+.registrationButton {
+  width: 100px;
+  height: 50px;
+  margin-left: 35%;
+  margin-top: 20px;
+  background-color: var(--acent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .registration_box form p {
-
-    margin-top: 20px;
-
+  width: 25vw;
+  margin-top: 20px;
+  text-align: center;
+  color: gray;
 }
+
 .dontHaveAcc {
-
-    color: var(--acent-color);
-    text-decoration: none;
-
+  color: var(--acent-color);
+  text-decoration: none;
 }
