@@ -17,21 +17,21 @@ function Header() {
     },
     {
       id: 2,
+      url: '/services',
+      targetEn: "Services",
+      targetKa: "სერვისები"
+    },
+    {
+      id: 3,
       url: '/about-us',
       targetEn: "About Us",
       targetKa: "ჩვენს შესახებ"
     },
     {
-      id: 3,
-      url: '/how-it-works',
-      targetEn: "How It Works",
-      targetKa: "როგორ მუშაობს"
-    },
-    {
       id: 4,
-      url: '/pricing',
-      targetEn: "Pricing",
-      targetKa: "ფასები"
+      url: '/profile',
+      targetEn: "Profile",
+      targetKa: "პროფილი"
     }
   ]
 

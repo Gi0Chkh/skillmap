@@ -6,14 +6,15 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import LanguageProvider from './context/LanguageContext.jsx'
+import AI from './components/AI/AI.jsx'
 // PAGES
 import App from './App.jsx'
+import ServicesPage from './pages/Services/ServicesPage.jsx'
 import LoginPage from './pages/Login/LoginPage.jsx'
 import RegistrationPage from './pages/Registration/RegistrationPage.jsx'
-import PricingPage from './pages/Pricing/PricingPage.jsx'
-import HowItWorksPage from './pages/HowItWorks/HowItWorksPage.jsx'
+import ProfilePage from './pages/Profile/ProfilePage.jsx'
 import AboutUsPage from './pages/AboutUs/AboutUsPage.jsx'
-
+import Background from './components/Background Animation/background.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,11 @@ const router = createBrowserRouter([
     ),
     children: [
       {path: "/", element: <App />},
-      {path: "/about-us", element: <AboutUsPage />},
-      {path: "/how-it-works", element: <HowItWorksPage />},
-      {path: "/pricing", element: <PricingPage />},
+      {path: "/services", element: <ServicesPage />},
       {path: "/login", element: <LoginPage />},
-      {path: "/register", element: <RegistrationPage />}
+      {path: "/register", element: <RegistrationPage />},
+      {path: "/profile", element: <ProfilePage />},
+      {path: "/about-us", element: <AboutUsPage />}
       // {path: "*", element: <NotFoundPage />}
     ]
   }
@@ -39,8 +40,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <AI/>
     <LanguageProvider>
       <RouterProvider router={router} />
     </LanguageProvider>
+    <Background />
   </StrictMode>,
 )

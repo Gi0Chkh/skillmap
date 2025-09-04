@@ -1,0 +1,56 @@
+.floatingContainer {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: 0.5s;
+}
+
+.container {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    border-radius: 100%;
+    border: 1px solid var(--acent-color);
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* transition: 0.5s; */
+}
+
+.menu {
+    margin-bottom: 12px;
+    background: transparent;
+    border: 1px solid var(--acent-color);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 24px;
+    display: flex;
+    width: 0;
+    height: 0;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.menuOpen {
+    width: 175px;
+    height: 200px;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+    transition: width 0.3s, height 0.3s, opacity 0.3s, transform 0.3s;
+}
+

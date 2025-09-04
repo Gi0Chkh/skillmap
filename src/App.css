@@ -1,0 +1,54 @@
+.container {
+  width: 100vw;
+}
+
+.start {
+  width: 100vw;
+  min-height: 100vh; /* Use min-height instead of height */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  font-size: 2rem;
+  color: #333;
+
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.cards img {
+  width: 15vw;
+}
+.cards h2 {
+  height: 200px;
+  font-size: 250%;
+}
+.cards p {
+  font-size: 100%;
+  text-align: start;
+  -webjit-text-stroke: 1px white;
+}
+
+.sponsors {
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+
+@media (max-width: 768px) {
+  .start {
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}

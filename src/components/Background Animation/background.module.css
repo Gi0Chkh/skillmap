@@ -1,0 +1,16 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+canvas {
+  width: 100vw;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
