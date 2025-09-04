@@ -1,11 +1,13 @@
 .contentWrapper {
   max-width: 95%;
-  justify-content: center;
   margin: auto;
+  gap: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pricingTexts {
   text-align: center;
-  margin: 100px 0;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -25,7 +27,7 @@
 }
 .card {
   width: 20%;
-  aspect-ratio: 1/1.2;
+  aspect-ratio: 1/1.5;
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 30px;
@@ -34,6 +36,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+}
+.cardTitle {
+  width: 90%;
 }
 .card ul {
   list-style-type: none;
@@ -60,4 +66,14 @@
 }
 .signupButton {
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .cardWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 }

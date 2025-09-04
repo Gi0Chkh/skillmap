@@ -51,7 +51,7 @@ function Header() {
             </div>
           </div>
           <div className={`${styles.linkWrapper} ${burgerBarActive && styles.showLinks}`}>
-              {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
+              {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url} onClick={handleBurgerBarClick}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
           </div>
           <div className={`${styles.buttonWrapper} ${burgerBarActive && styles.showButtons}`}>
             <LangToggle />

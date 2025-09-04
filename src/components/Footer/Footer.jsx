@@ -5,7 +5,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 function Footer() {
   const { lang } = React.useContext(LanguageContext);
   return (
-    <footer className={styles.footer}>
+    <footer>
       Footer
     </footer>
   );

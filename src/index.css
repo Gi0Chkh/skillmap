@@ -17,3 +17,6 @@
   font-weight: 400;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff) format('woff');
 }
+main {
+  margin: 100px 0;
+}
