@@ -18,11 +18,13 @@
   font-weight: 400;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff) format('woff');
 }
-html, body {
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Only hide horizontal overflow */
-  /* Remove overflow: hidden; if present */
+main {
+  margin: 100px 0;
+}
+.panel {
+
+  background: transparent;
+  border: 1px solid white;
+  backdrop-filter: blur(2px);
+
 }
