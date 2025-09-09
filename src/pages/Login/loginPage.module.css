@@ -10,6 +10,7 @@
 
 .icon {
   width: 150px;
+  animation: appearUp 1s ease-in-out;
 }
 
 .login_box .user_box {
@@ -31,6 +32,7 @@
 
 .login_box form h2 {
   font-size: 3rem;
+  animation: appearLeft 1s ease-in-out;
 }
 
 .login_box .user_box input {
@@ -40,6 +42,7 @@
   margin-top: 10px;
   background-color: transparent;
   backdrop-filter: blur(2px);
+  animation: appearDown 1s ease-in-out;
 }
 
 .loginButton {
@@ -53,6 +56,7 @@
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  animation: appearPop 1s ease-in-out;
 }
 
 .forgotPassword {
@@ -61,6 +65,7 @@
   text-align: left;
   color: gray;
   text-decoration: none;
+  animation: appearRight 1s ease-in-out;
 }
 
 .login_box form p {
@@ -73,4 +78,62 @@
 .dontHaveAcc {
   color: var(--acent-color);
   text-decoration: none;
+  animation: appearDown 1s ease-in-out;
+}
+
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+@keyframes appearLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+@keyframes appearPop {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+
 }

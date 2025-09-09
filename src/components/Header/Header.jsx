@@ -36,21 +36,19 @@ function Header() {
   return (
     <header style={burgerBarActive ? {position: "fixed", top: 0, left: 0, width: "100%", zIndex: 10} : {}}>
         <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column", height: "100vh", transition: "all 2s ease-in-out"} : {}}>
-          <div className={styles.phoneHeader}>
+          {/* <div className={styles.phoneHeader}>
             <Link to="/"><img src="/skillMap(no text).svg" alt="Skillmap Logo"  className={styles.headerIcon}/></Link>
             <div className={`${styles.burgerBar} ${burgerBarActive && styles.activeBar}`} onClick={handleBurgerBarClick}>
               <i></i>
               <i></i>
               <i></i>
             </div>
-          </div>
+          </div> */}
           <div className={`${styles.linkWrapper} ${burgerBarActive && styles.showLinks}`}>
               {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url} onClick={() => setBurgerBarActive(false)}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
+              {/* <LangToggle /> */}
           </div>
-          <div className={`${styles.buttonWrapper} ${burgerBarActive && styles.showButtons}`}>
-            <LangToggle />
-            <Link to='/login'><button className={styles.loginButton}>{lang === "EN" ? "Log In" : "შესვლა"}</button></Link>
-          </div>
+          
         </nav>
     </header>
   )

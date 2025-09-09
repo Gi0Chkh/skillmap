@@ -1,17 +1,27 @@
 header {
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
   box-shadow: 0px 0px 24px 0px rgb(0, 0, 0, 0.3);
-  background-color: transparent;
-  backdrop-filter: blur(2px);
-  border: 1px solid white;
   border-radius: 0 0 25px 25px;
+  background-color: transparent;
+  animation: appear 1s ease-in-out;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+
 }
 .contentWrapper {
   max-width: 95%;
   height: 85px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  /* justify-content: space-between; */
   transition: all 0.3s ease-in-out;
 }
 .phoneHeader {

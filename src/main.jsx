@@ -13,7 +13,6 @@ import ServicesPage from './pages/Services/ServicesPage.jsx'
 import LoginPage from './pages/Login/LoginPage.jsx'
 import RegistrationPage from './pages/Registration/RegistrationPage.jsx'
 import HowItWorksPage from './pages/HowItWorks/HowItWorksPage.jsx'
-import Background from './components/Background Animation/background.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
       {path: "/", element: <App />},
       {path: "/services", element: <ServicesPage />},
       {path: "/login", element: <LoginPage />},
-      {path: "/register", element: <RegistrationPage />},
+      {path: "/registration", element: <RegistrationPage />},
       {path: "/how-it-works", element: <HowItWorksPage />}
       // {path: "*", element: <NotFoundPage />}
     ]
@@ -42,6 +41,5 @@ createRoot(document.getElementById('root')).render(
     <LanguageProvider>
       <RouterProvider router={router} />
     </LanguageProvider>
-    <Background />
   </StrictMode>,
 )

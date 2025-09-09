@@ -6,7 +6,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 function LoginPage() {
   const { lang } = useContext(LanguageContext);
   return (
-    <div class={styles.login_box}>
+    <div className={styles.login_box}>
       <img
         src="/public/skillMap(no text).svg"
         alt="skillMap icon"
@@ -15,13 +15,13 @@ function LoginPage() {
       <form>
         <h2>SkillMap</h2>
         <div className={styles.inputs}>
-          <div class={styles.user_box}>
+          <div className={styles.user_box}>
             <Input
               type="text"
               placeholder={lang === "EN" ? "Email" : "მეილი"}
             />
           </div>
-          <div class={styles.user_box}>
+          <div className={styles.user_box}>
             <Input
               type="password"
               id="password"
@@ -37,7 +37,7 @@ function LoginPage() {
         </button>
         <p>
           {lang === "EN" ? "Don't have an account?" : "არ გაქვს აქაუნთი?"}{" "}
-          <a href="/register" className={styles.dontHaveAcc}>
+          <a href="/registration" className={styles.dontHaveAcc}>
             {lang === "EN" ? "Sign Up" : "შესვლა"}
           </a>
         </p>

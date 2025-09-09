@@ -6,7 +6,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 function RegistrationPage() {
   const { lang } = useContext(LanguageContext);
   return (
-    <div class={styles.registration_box}>
+    <div className={styles.registration_box}>
       <img
         src="/public/skillMap(no text).svg"
         alt="skillMap icon"
@@ -15,13 +15,13 @@ function RegistrationPage() {
       <form>
         <h2>SkillMap</h2>
         <div className={styles.inputs}>
-          <div class={styles.user_box}>
+          <div className={styles.user_box}>
             <Input
               type="text"
               placeholder={lang === "EN" ? "Email" : "შესვლა"}
             />
           </div>
-          <div class={styles.user_box}>
+          <div className={styles.user_box}>
             <Input
               type="password"
               id="password"

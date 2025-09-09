@@ -1,29 +1,53 @@
+main {
+  margin-top: 2%;
+}
+
 .contentWrapper {
   max-width: 95%;
-  margin: auto;
-  gap: 100px;
+  gap: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .pricingTexts {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+
 .pricingTexts h1 {
   font-size: 4em;
   margin-bottom: 20px;
+  animation: appearUp 1s ease-in-out;
 }
+
 .pricingTexts p {
   font-size: 1.5em;
   color: #555;
+  animation: appearLeft 1s ease-in-out;
 }
+
 .cardWrapper {
   display: flex;
   justify-content: center;
   gap: 50px;
+  animation: appearDown 1s ease-in-out;
+}
+.cardWrapper > *:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.cardWrapper > *:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.cardWrapper > *:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.cardWrapper > * {
+  opacity: 0;
+  animation: appearDown 1s ease forwards;
 }
 .card {
   width: 20%;
@@ -36,11 +60,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  background-color: white;
 }
+
 .cardTitle {
   width: 90%;
 }
+
 .card ul {
   list-style-type: none;
   padding: 0;
@@ -48,13 +74,15 @@
   flex-direction: column;
   gap: 10px;
 }
-.card li{
+
+.card li {
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 0.9em;
   color: rgb(118, 118, 118);
 }
+
 .signupButton button {
   background-color: #007bff;
   color: white;
@@ -64,9 +92,11 @@
   cursor: pointer;
   font-size: 1em;
 }
+
 .signupButton {
   text-align: center;
 }
+
 @media screen and (max-width: 768px) {
   .cardWrapper {
     flex-direction: column;
@@ -75,5 +105,60 @@
   .card {
     width: 80%;
     margin-bottom: 30px;
+  }
+}
+
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appearLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes appearPop {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

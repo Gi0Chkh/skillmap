@@ -4,27 +4,91 @@
   padding: 0;
   font-family: "FiraGO";
 }
-:root
-{
-  --acent-color: #0D78E2;
-  --secondary-color: #20A980;
+:root {
+  --acent-color: #0d78e2;
+  --secondary-color: #20a980;
   --dark-color: #0d0d0d;
   --max-width: 768px;
 }
 @font-face {
-  font-family: 'FiraGO';
+  font-family: "FiraGO";
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2) format('woff2'), url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff) format('woff');
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff)
+      format("woff");
 }
 main {
   margin: 100px 0;
 }
-.panel {
+body {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url("/public/Circuit.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: absolute;
+  background-position: start;
+  background-size: 50%;
+}
 
-  background: transparent;
-  border: 1px solid white;
-  backdrop-filter: blur(2px);
+
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+@keyframes appearLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+@keyframes appearPop {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 
 }
