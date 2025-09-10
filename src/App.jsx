@@ -7,6 +7,9 @@ function App() {
   const { lang } = useContext(LanguageContext);
   return (
     <main className="container">
+      <div className="testBox">
+        AAA
+      </div>
       <section className="start">
         <img src="/public/skillMap(no text).svg" alt="icon" className="icon" />
         <div className="cards">

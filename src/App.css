@@ -26,7 +26,6 @@
   width: 100%;
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 1rem;
   animation: appearRight 1s ease-in-out;
 }
 .cards p {
@@ -36,23 +35,29 @@
   animation: appearDown 1s ease-in-out;
 }
 .icon {
-  width: 25vw;
+  width: 20vw;
   height: auto;
   animation: appearLeft 1s ease-in-out;
 }
 
 .sponsors {
   width: 100%;
+  height: 50vh;
   padding: 5%;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: var(--acent-color);
+  font-size: 2rem;
   background-color: var(--acent-color);
 }
-.sponsors h2 {
+.sponsors h1 {
+  font-weight: bold;
   margin-bottom: 2rem;
   text-align: center;
   width: 100%;
+  text-shadow: 
+    2px 2px 4px black,
+    -1px -1px 1px white;
 }
 .sponsorLogos {
   width: 90%;
@@ -64,7 +69,7 @@
   position: relative;
 }
 .sponsorLogos img {
-  width: 10vw;
+  width: 7vw;
   height: auto;
   border-radius: 50%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -145,8 +150,43 @@ section {
 
 @media (max-width: 768px) {
   .start {
-    grid-template-columns: 1fr;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    flex-direction: column;
   }
+  .icon {
+    width: 35vw;
+  }
+}
+
+.testBox {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.testBox::before,
+.testBox::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: conic-gradient(
+    from var(--angle) at center,
+    #00c3ff,
+    #4d0199,
+    #6300c6,
+    #00c3ff
+  );
+  border-radius: inherit;
+  padding: 2px;
+  z-index: -1;
+  /* animation: spin 4s linear infinite; */
+}
+.testBox::after {
+  filter: blur(10px);
 }

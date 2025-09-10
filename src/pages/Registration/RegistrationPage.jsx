@@ -2,6 +2,7 @@ import React, { useState, useContext, useRef } from "react";
 import styles from "./registrationPage.module.css";
 import Input from "../../components/Input/Input";
 import { LanguageContext } from "../../context/LanguageContext";
+import { Link } from "react-router-dom";
 
 function RegistrationPage() {
   const { lang } = useContext(LanguageContext);
@@ -34,9 +35,9 @@ function RegistrationPage() {
         </button>
         <p>
           {lang === "EN" ? "Already have an account?" : "უკვე გაქვს აქაუნთი?"}{" "}
-          <a href="/login" className={styles.dontHaveAcc}>
+          <Link to="/login" className={styles.dontHaveAcc}>
             {lang === "EN" ? "Log In" : "შესვლა"}
-          </a>
+          </Link>
         </p>
       </form>
     </div>

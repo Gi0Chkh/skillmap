@@ -46,8 +46,8 @@
 }
 
 .menuOpen {
-  width: 175px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;

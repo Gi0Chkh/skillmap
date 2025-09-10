@@ -1,11 +1,16 @@
 header {
   width: 80%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: 10%;
   box-shadow: 0px 0px 24px 0px rgb(0, 0, 0, 0.3);
   border-radius: 0 0 25px 25px;
   background-color: transparent;
   animation: appear 1s ease-in-out;
 }
+
 @keyframes appear {
   0% {
     transform: translateY(-100px);
@@ -13,8 +18,8 @@ header {
   100% {
     transform: translateY(0);
   }
-
 }
+
 .contentWrapper {
   max-width: 95%;
   height: 85px;
@@ -24,30 +29,38 @@ header {
   /* justify-content: space-between; */
   transition: all 0.3s ease-in-out;
 }
+
 .phoneHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .headerIcon {
   width: auto;
   height: 65px;
   align-items: center;
 }
+
 .linkWrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 50px;
 }
+
 img {
-  width: 85px;  
+  width: 85px;
 }
+
 .navLink {
   color: black;
   font-size: 1.2em;
   font-weight: 500;
   text-decoration: none;
-}.navLink::after {
+}
+
+.navLink::after {
   content: "";
   display: block;
   width: 0;
@@ -55,17 +68,21 @@ img {
   background: var(--acent-color);
   transition: width 0.3s;
 }
+
 .navLink:hover::after {
   width: 100%;
 }
+
 .navLink:hover {
   color: var(--acent-color);
 }
+
 .buttonWrapper {
   display: flex;
   align-items: center;
   gap: 30px;
 }
+
 .loginButton {
   background-color: initial;
   border: none;
@@ -73,9 +90,11 @@ img {
   color: gray;
   cursor: pointer;
 }
+
 .loginButton:hover {
   color: var(--acent-color);
 }
+
 .regButton {
   border: none;
   border-radius: 5px;
@@ -85,6 +104,7 @@ img {
   background-color: var(--secondary-color);
   cursor: pointer;
 }
+
 .burgerBar {
   display: none;
   flex-direction: column;
@@ -95,6 +115,10 @@ img {
 }
 
 @media (max-width: 768px) {
+  header {
+    width: 100%;
+    margin-left: 0;
+  }
   .contentWrapper {
     width: 100%;
     height: auto;
@@ -103,43 +127,5 @@ img {
   .phoneHeader {
     width: 100%;
     height: 85px;
-  }
-  .linkWrapper, .buttonWrapper {
-    display: none;
-  }
-  .burgerBar {
-    display: flex;
-    margin-left: 20px;
-  }
-  .burgerBar i {
-    width: 100%;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
-  }
-  .activeBar i:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6.5px);
-  }
-  .activeBar i:nth-child(2) {
-    opacity: 0;
-  }
-  .activeBar i:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6.5px);
-  }
-  .showLinks, .navLink{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 10px;
-    font-size: 2.5rem;
-
-  }
-  .showButtons {
-    display: block;
-    margin: 15px 0;
-  }
-  .loginButton, .regButton {
-    font-size: 1em;
-    padding: 8px;
   }
 }
