@@ -12,7 +12,8 @@ import App from './App.jsx'
 import ServicesPage from './pages/Services/ServicesPage.jsx'
 import LoginPage from './pages/Login/LoginPage.jsx'
 import RegistrationPage from './pages/Registration/RegistrationPage.jsx'
-import HowItWorksPage from './pages/HowItWorks/HowItWorksPage.jsx'
+import AboutUs from './pages/AboutUs/AboutUsPage.jsx'
+import Profile from './pages/Profile/ProfilePage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
       {path: "/services", element: <ServicesPage />},
       {path: "/login", element: <LoginPage />},
       {path: "/registration", element: <RegistrationPage />},
-      {path: "/how-it-works", element: <HowItWorksPage />}
+      {path: "/about-us", element: <AboutUs />},
+      {path: "/profile", element: <Profile />},
       // {path: "*", element: <NotFoundPage />}
     ]
   }

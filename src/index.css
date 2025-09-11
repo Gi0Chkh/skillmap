@@ -29,7 +29,7 @@ body {
   position: relative;
   height: 100vh;
   overflow-x: hidden;
-  background-image: url("/public/Circuit.jpg");
+  background-image: url("/public/Backround.png");
   background-size: cover;
   background-repeat: repeat;
   background-attachment: absolute;

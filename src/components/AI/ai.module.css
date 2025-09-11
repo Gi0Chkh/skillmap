@@ -28,8 +28,8 @@
 
 .menu {
   margin-bottom: 12px;
-  background: transparent;
-  border: 1px solid var(--acent-color);
+  background: white;
+  border: 1px solid #fff;
   backdrop-filter: blur(2px);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);

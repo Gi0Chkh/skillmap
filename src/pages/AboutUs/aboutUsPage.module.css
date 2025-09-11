@@ -1,0 +1,138 @@
+.teamSection {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  background-color: var(--acent-color);
+  margin-bottom: 5%;
+  animation: appearLeft 1s ease-in-out;
+}
+.peopleCards {
+
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+
+}
+.personCard {
+  width: 150px;
+  height: 225px;
+  padding: 1% 0;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+  /* background-color: blue; */
+}
+.circle {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  border: 2px solid var(--secondary-color);
+}
+.personCard img {
+  width: 100px;
+  height: 175px;
+  border-radius: 0 0 50% 50% / 0 0 20% 20%;
+  /* background-color: red; */
+}
+.teamSection h1 {
+  animation: appearPop 1s ease-in-out;
+}
+
+.howItWorks {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+  position: relative;
+}
+.howItWorks h1 {
+  position: absolute;
+  top: 0;
+  animation: appearPop 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    height: auto;
+  }
+  .peopleCards {
+    height: auto;
+    justify-content: start;
+    flex-direction: column;
+    gap: 5%;
+  }
+}
+@keyframes appearUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+@keyframes appearDown {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+@keyframes appearRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+@keyframes appearLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+@keyframes appearPop {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+}

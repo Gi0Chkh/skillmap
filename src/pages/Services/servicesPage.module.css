@@ -78,38 +78,61 @@ main {
 }
 
 .premiumCard {
-  width: 20%;
+  position: relative;
+  z-index: 0;
+}
+.premiumCard ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.premiumCard li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  color: rgb(118, 118, 118);
+}
+.premiumCardContent {
+  width: 300px;
   aspect-ratio: 1/1.5;
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 30px;
-  width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
   position: relative;
+  z-index: 1;
 }
 .premiumCard::before,
 .premiumCard::after {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: inherit;
-  background: conic-gradient(
-    from var(--angle) at center,
-    #00c3ff,
-    #4d0199,
-    #6300c6,
-    #00c3ff
-  );
+  background: conic-gradient(from var(--angle) at center, #ff6ec4, #7873f5, var(--secondary-color), var(--secondary-color), var(--acent-color), #ff6ec4);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: calc(5px + 225px) calc(5px + 150px);
   z-index: -1;
+  animation: spin 4s linear infinite;
 }
 .premiumCard::after {
   filter: blur(10px);
 }
-
+.premiumCard span {
+  background-image: conic-gradient(from var(--angle) at center, #ff6ec4, #7873f5, var(--secondary-color), var(--secondary-color), var(--acent-color), #ff6ec4);
+  color: transparent;
+  background-clip: text;
+  background-size: 400%;
+  animation: spin 4s linear infinite;
+}
 
 .signupButton button {
   background-color: #007bff;

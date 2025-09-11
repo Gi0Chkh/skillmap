@@ -22,7 +22,7 @@ header {
 
 .contentWrapper {
   max-width: 95%;
-  height: 85px;
+  height: 75px;
   margin: auto;
   display: flex;
   justify-content: center;

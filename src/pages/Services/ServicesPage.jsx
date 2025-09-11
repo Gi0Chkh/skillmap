@@ -13,7 +13,7 @@ function PricingPage() {
         <div className={styles.cardWrapper}>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <h2 className={styles.cardTitle}>For Small Businesess</h2>
+              <h2 className={styles.cardTitle}>For <span>Small</span> Businesess</h2>
               <p className={styles.cardPrice}>$6/employee</p>
             </div>
             <ul>
@@ -28,7 +28,7 @@ function PricingPage() {
           </div>
           <div className={styles.card}>
             <div className={styles.cardText}>
-              <h2 className={styles.cardTitle}>For Medium Businesses</h2>
+              <h2 className={styles.cardTitle}>For <span>Medium</span> Businesses</h2>
               <p className={styles.cardPrice}>$19/employee</p>
             </div>
             <ul>
@@ -42,8 +42,9 @@ function PricingPage() {
             <Link to="/signup" className={styles.signupButton}><button>Choose</button></Link>
           </div>
           <div className={styles.premiumCard}>
+            <div className={styles.premiumCardContent}>
             <div className={styles.cardText}>
-              <h2 className={styles.cardTitle}>For Large Businesses</h2>
+              <h2 className={styles.cardTitle}>For <span>Large</span> Businesses</h2>
               <p className={styles.cardPrice}>$39/employee</p>
             </div>
             <ul>
@@ -55,6 +56,7 @@ function PricingPage() {
               <li>Weekly Skill reports <strong>✓</strong></li>
             </ul>
             <Link to="/signup" className={styles.signupButton}><button>Choose</button></Link>
+            </div>
           </div>
         </div>
       </div>
