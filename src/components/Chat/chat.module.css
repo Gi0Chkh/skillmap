@@ -1,0 +1,60 @@
+.container {
+  width: 750px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 3%;
+}
+.chatInput {
+  width: 1000px;
+  height: 50px;
+  position: relative;
+  border-radius: 50px;
+  z-index: 0;
+}
+.chatInput input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: #353535;
+  color: white;
+  border: none;
+}
+.chatInput::before,
+.chatInput::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from var(--angle) at center,
+    #ff6ec4,
+    #7873f5,
+    var(--secondary-color),
+    var(--secondary-color),
+    var(--acent-color),
+    #ff6ec4
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  padding: calc(5px + 25px) calc(5px + 338px);
+  z-index: -1;
+  animation: spin 4s linear infinite;
+}
+.chatInput::after {
+  filter: blur(10px);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}

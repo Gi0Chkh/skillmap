@@ -39,7 +39,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AI/>
+    {/* <AI/> */}
     <LanguageProvider>
       <RouterProvider router={router} />
     </LanguageProvider>

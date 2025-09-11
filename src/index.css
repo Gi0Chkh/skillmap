@@ -20,6 +20,14 @@
     url(https://cdn.jsdelivr.net/fontsource/fonts/firago@latest/latin-400-normal.woff)
       format("woff");
 }
+@font-face {
+  font-family: "HandWriting";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/font.ttf)
+      format("woff2")
+}
 main {
   min-height: 100vh;
   height: auto;

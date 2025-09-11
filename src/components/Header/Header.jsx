@@ -40,7 +40,7 @@ function Header() {
         <nav className={styles.contentWrapper} style={burgerBarActive ? { flexDirection: "column", height: "100vh", transition: "all 2s ease-in-out"} : {}}>
           <div className={`${styles.linkWrapper} ${burgerBarActive && styles.showLinks}`}>
               {links.map(link => (<Link key={link.id} className={styles.navLink} to={link.url} onClick={() => setBurgerBarActive(false)}>{lang === "EN" ? link.targetEn : link.targetKa}</Link>))}
-              {/* <LangToggle /> */}
+              <LangToggle />
           </div>
           
         </nav>
